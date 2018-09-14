@@ -2,12 +2,14 @@
   text-align: center;
 }
 
+/*
 .error-message {
   background: #ff9b9b;
   color: white;
   border-radius: 5px;
   padding: 10px;
 }
+*/
 
 .mew-form, .loading {
   width: 50%;
@@ -18,7 +20,7 @@
   text-align: center;
 }
 
-.mews {
+/* .mews {
   width: 80%;
   margin: 0 auto;
 }
@@ -31,4 +33,4 @@
 
 .mews > div:not(:last-child) {
   margin-bottom: 8px;
-}
+} */
