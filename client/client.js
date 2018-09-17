@@ -7,6 +7,8 @@ const loadingElement = document.querySelector('.loading');
 loadingElement.style.display='none';
 // const mewsElement = document.querySelector('.mews');
 // const API_URL = window.location.hostname === '127.0.0.1' ? 'http://localhost:5000/mews' : 'https://meower-api.now.sh/mews';
+const API_URL = 'http://localhost:5000/mews';
+
 //
 // errorElement.style.display = 'none';
 //
@@ -31,14 +33,17 @@ form.addEventListener('submit', (event) => {
     console.log(mew);
     form.style.display='none';
     loadingElement.style.display='';
-//
-//     fetch(API_URL, {
-//       method: 'POST',
-//       body: JSON.stringify(mew),
-//       headers: {
-//         'content-type': 'application/json'
-//       }
-//     }).then(response => {
+
+    fetch(API_URL, {
+      method: 'POST',
+      body: JSON.stringify(mew),
+      headers: {
+        'content-type': 'application/json'
+      }
+    }).then(response => respones.json())
+      .then (createNew => {
+        console.log(createdNew);
+      })
 //       if (!response.ok) {
 //         const contentType = response.headers.get('content-type');
 //         if (contentType.includes('json')) {
